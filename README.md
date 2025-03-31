@@ -4,7 +4,13 @@ Jegatron VHDL Library - Generic Clock Enable Divider
 
 Entity: generic_clk_en_divider
 
-Declarating
+Divides the clock into single-clock-length enable pulses to use as enable signals for other modules in the same clock domain. To make other modules run slower :)
+
+en_out(0) is clk / 2\
+en_out(1) is clk / 4\
+etc
+
+Declaring component
 
 ```vhdl
 	component generic_clk_en_divider is
@@ -21,7 +27,7 @@ Declarating
 	end component;
 ```
 
-Instansiating
+Instantiating
 
 ```vhdl
 	my_9_bit_divider : generic_clk_en_divider
