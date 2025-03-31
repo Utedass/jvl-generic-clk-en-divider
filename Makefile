@@ -9,16 +9,17 @@
 
 ##### All variables you need to edit are moved here:
 
-#
+# Main design entity
+PRIMARY_DESIGN = generic_clk_en_divider
 
 # Add design files to this row (not test benches), expected to reside in hdl_design/ subfolder
-DESIGN_FILES = generic_clk_en_divider.vhd
+DESIGN_FILES = $(PRIMARY_DESIGN).vhd
 
 # Add all testbench-related file names on this row, expected to reside in testbench/ subfolder
-TEST_BENCHES = generic_clk_en_divider_tb.vhd
+TEST_BENCHES = $(PRIMARY_DESIGN)_tb.vhd
 
 # Name of the testbench entity to simulate (the entity name, not the filename)
-TOP_TESTBENCH = generic_clk_en_divider_tb
+TOP_TESTBENCH = $(PRIMARY_DESIGN)_tb
 
 ##### NO TOUCHIES FURTHER DOWN IN THE FILE
 
